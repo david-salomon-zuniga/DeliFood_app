@@ -1,224 +1,575 @@
-:root {
-  --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
-  --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-lg: 18px;
-  --font-md: 16px;
-  --font-sm: 14px;
-  --font-sx: 12px;
-  --line-height-loose: 1.75;
-  --line-height-normal: 1.5;
-  --line-height-dense: 1.1;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 64px;
-  --size-content: 54rem;
-  --size-gutter: var(--space-5);
-  --size-gap: var(--space-6);
+*{
+  margin: auto;
+
 }
-html {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font: sans-serif;
-  font-size: var(--font-md);
-  line-height: var(--line-height-normal);
-  overflow-y: scroll;
+html{
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 25px; /* 1rem = 16px */
 }
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
+body{
+overflow-y: auto;
+overflow-x: hidden;
+}
+.littleLeftMarginAdjustment{
+  margin-left: 2rem !important;
+}
+.littleLeftMarginAdjustment canvas{
+  margin-left: 2rem !important;
+}
+.adjustmentForLongitudinalDivContent{
+  margin-top:0 !important; padding-top: 0 !important;
+  position: relative;
+  top: -4rem;
+}
+.section1Landing,.section2Landing,.section3Landing,.section4Landing{
+  display: flex;
+}
+.cyanLinearGradientBackground{
+  background: linear-gradient(135deg, #7FFFD4, #76D7EA);
+}
+.wineLinearGradientBack{
+  background: linear-gradient(#a51344, #2b3838);
+}
+.pinkLinearGradientBack{
+  background: linear-gradient(135deg, #fc1dcf, #f1d262);
+}
+.blueLinearGradientBack{
+  background: linear-gradient(135deg, #7a44ed, #5be4ff);
+}
+.purpleOrangeGradientBack{
+  background: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b);
+}
+.tealGreenGradientBack {
+  background: linear-gradient(135deg, #1abc9c, #2ecc71);
+}
+.section4Landing{
+  width: 500%;
+}
+.blueGradientForSquares{
+  background: linear-gradient(135deg, rgb(3 170 228), rgb(42 220 255));
+}
+.spaceGradientBack {
+  background: linear-gradient(135deg, #38872e, #2a8b7f, #2fc44b);
+}
+.section2Landing p{
+  color: black;
+  font-weight: 400;
+}
+.section3Landing>div>div p{
+  color: #fff7ff;
+  font-weight: 400;
+}
+.section2Landing>div:nth-child(2)>div:nth-child(1){
+    margin-top: 5rem;
+}
+
+.section4Landing>div>.longitudinalDiv{
+  padding: 0.5rem 0 0 0rem;
+}
+.divGeneral{
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.transversalDiv{
+  float: left;
+  width: 50%;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.squares{
+  width: 60%;
+  min-height: 50vh;
+  max-height: 50vh;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-radius: 25px;
+}
+
+.buttonAdjustmentAtBottomLeftCorner{
+  margin: 50vh 0 0 4rem !important;
+}
+.longitudinalDiv{
+  width: 100%;
+  height: 50vh;
+}
+.generalmainSlider{
+  margin: 3rem 2rem 0 0;
+}
+.generalmainSliderImg,.generalLCTASliderImg{
+  width: 100%;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  margin-left: -1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.10rem 0.6rem #ffffff99;
+}
+.generalmainSliderImg{
+  background-image: url('../images/defaultMainBackImg.jpeg');
+}
+.generalLCTASliderImg{
+  background-image: url('../images/lcta1.jpeg');
+}
+.generalmainSliderImg:hover,.generalBenefitsSliderImg:hover,.generalLCTASliderImg:hover{
+  box-shadow: 0 0.16rem 0.6rem #ffffff99;
+}
+.generalBenefitsSlider{
+  margin: 0rem 0rem 0 0;
+}
+.generalBenefitsSliderImg{
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0.10rem 0.6rem #ffffff99;
+  background-image: url('../images/defaultBenefitsBackImg.jpg');
+}
+.centerTheLongitudinalDiv{
+  margin: 7.5vh 0;
+  min-height: 85vh;
+  max-height: 85vh;
+}
+.adjustTransversalToCenteredLongitudinalDiv{
+  min-height: 85vh;
+  max-height: 85vh;
+}
+.adjustTransversalToCenteredTransversalDiv{
+  margin: 3rem 0 0 4.5rem;
+}
+.divContentLongitudinalForDivBackImg{
+  width: 60%;
+  min-height: 45vh;
+  max-height: 45vh;
+  float: right;
+  margin: 2.5rem 0 0 0;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 0 0 0 0.5rem;
+  border: 1px solid cyan;
+}
+.coverALittleTheBackGroundWithGrey{
+  background: linear-gradient(rgba(76, 44, 132, 0.5), rgb(0 0 0 / 25%));
+}
+.centeredTransversalDivContent{
+  padding: 4rem 3rem 3rem 3rem;
+  max-height: 27vh;
+  min-height: 27vh;
+}
+.centeredTransversalDivContent h1, .centeredTransversalDivContent p{
+  margin: 1rem 0 0 0;
+}
+.divContentTransversalForARoundDivImg{
+  width: 50%;
+}
+.centerAdjustmentForDivContent{
+  padding: 0.5rem !important;
+  border: 1px solid cyan;
+  position: relative;
+  margin: 2rem 0 0 2rem !important;
+}
+.adjustLongitudinalWidth{
+  width: 60% !important;
+}
+.adjustLongitudinalHeight{
+  height: 70vh !important;
+}
+.centerAdjustmentForlongitudinalDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.litleSquaresAdjustForDivContent{
+
+}
+.litleSquaresAdjustForDivContent h2,.litleSquaresAdjustForDivContent p{
+  margin: 0.5rem 0 0 0;
+}
+.containerOfRoundImg,.divContentTransversalForARoundDivImg,.containerOfMiniSliderImg{
+  display: inline-block; padding: 1rem 2rem 0rem 2rem;
+}
+.containerOfRoundImg{
+  width:15%;
   margin: 0;
-  word-wrap: break-word;
 }
-a {
-  background-color: transparent;
-  color: var(--color-primary);
-  text-decoration: none;
+.divRoundImg{
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 15vh;
+  border-radius: 100%;
+}
+.containerOfMiniSliderImg{
+  width: 15rem;
+  height: 35vh;
+}
+.divMiniSliderImg{
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+  border-radius: 0.8rem;
+}
+.testimonialsRoundImg{
+  background-image: url("../images/prof1.jpeg");
+}
+.rankedMiniSlider{
+  background-image: url("../images/ranked1.jpg");
+}
+.influencersMiniSlider{
+  background-image: url("../images/influencers1.jpg");
+}
+.usersContentMiniSlider{
+  background-image: url("../images/profile1.jpg");
+}
+.mediaMentionsRoundImg{
+  background-image: url("../images/media_mentions1.jpg");
+}
+.followersRoundImg{
+  background-image: url("../images/likes.jpg");
+}
+.timeSavingTipsRoundImg{
+  background-image: url("../images/profile1.jpg");
+}
+.awardsRoundImg{
+  background-image: url("../images/awards1.png");
+  width: 30% !important;
+}
+.usersSuccessStoriesRoundImg{
+  background-image:url("../images/randomperson1.jpg");
+}
+.centeredGeneralDivForSection{
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  margin: 5vh 0;
+  background: linear-gradient(#a51344, #2b3838);
+}
+.verticalLeftDiv,.verticalRightDiv,.verticalAlignedDiv{
+  width: 50%;
+  height: 75vh;
+  margin: 12.5vh 3rem;
+}
+.divBtn{
+  display: flex;
+  justify-content: space-between;
+}
+.containerOfButtonSliders{
+  display: inline-block;
+  margin: 1rem 0 0 6rem;
+}
+.divChart{
+  margin: 2rem 0 0 1.5rem;
+  display: inline-block;
+}
+
+.divChart canvas{
+  width: 20rem !important;
+  height: 30vh !important;
+}
+.divContentTransversalForMiniSliders{
+  display: inline-block;
+  padding: 2rem 0 0 0;
+  width: 80%;
+  min-height: 33vh;
+  max-height: 33vh;
+  margin: 0 0 0 1rem;
+}
+.divContentTransversalForARoundDivImg h2,.divContentTransversalForARoundDivImg p,.divContentTransversalForMiniSliders h1,.divContentTransversalForMiniSliders p,.divBtn,.section3Landing>div>div h2, .section3Landing>div>div p{
+  margin-top: 1rem;
+}
+.adjustLCTADivGeneral{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.removeMarginTop{
+  margin-top: -1rem;
+}
+.removeMarginLeft{
+  margin-left: -1rem;
+}
+h1{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+  font-style: normal;
+  font-size: 1.6rem;
+  
+  /* 1rem = 25px */
+  /* 1.6rem = 40px */
 }
-a:active,
-a:hover {
-  outline-width: 0;
-  text-decoration: none;
+h2{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4rem;
+  /* 1rem = 25px */
+  /* 1.6rem = 40px */
 }
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
+h1,h2{color: #ff6262;}
+p{color: #6bc4ff;}
+h1:hover,h2:hover,p:hover,.generalSliderForRandomSection:hover{text-shadow: 0.04rem 0.04rem 0.04rem rgba(255, 255, 255, 0.7);}
+a{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
   font-style: italic;
 }
-h1 {
-  margin: 0;
-  margin-bottom: 3rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
+hr{
+  height: 2px;
 }
-h1 > b {
-  color: var(--color-primary);
-}
-img {
-  border-style: none;
-  max-width: 100%;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: var(--font-mono);
-  font-size: 1em;
-  line-height: inherit;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-hgroup,
-img,
-figure,
-fieldset,
-ul,
-ol,
-dl,
-dd,
-p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: var(--space-4);
-}
-ul,
-ol {
-  margin-left: var(--space-4);
-  list-style-position: outside;
-  list-style-image: none;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-size: 0.875rem;
-  line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  word-wrap: normal;
-  padding: var(--space-4);
-}
-b,
-strong,
-dt,
-th {
-  font-weight: bold;
-}
-li {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-ol li,
-ul li {
-  padding-left: 0;
-}
-li > ol,
-li > ul {
-  margin-bottom: calc(var(--space-4) / 2);
-  margin-left: var(--space-4);
-  margin-top: calc(var(--space-4) / 2);
-}
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-p {
-  max-width: 680px;
-}
-code {
-  font-size: 0.875rem;
-}
-kbd {
-  font-size: 0.875rem;
-}
-samp {
-  font-size: 0.875rem;
-}
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-tt,
-code {
-  background-color: var(--color-code-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-code);
-  font-family: var(--font-mono);
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  word-break: normal;
-}
-pre code {
+.slidingButtonsLandingPage{
   background: none;
+  border: none;
+  font-size: 1.2rem;
+  /* 1rem = 25px */
+  /* 1.2rem = 30px */
+  color: #fffe00;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
-code:before,
-code:after,
-tt:before,
-tt:after {
-  content: "\00a0";
-  letter-spacing: -0.2em;
+.slidingButtonsLandingPage:hover{
+  text-shadow: 0.04rem 0.04rem 0.4rem rgb(255 255 254 / 100%);
 }
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: none;
+.landingPageAnchorTags{
+  color: #e60aff;
+  transition: text-shadow 0.3s;
+  letter-spacing: 0.16rem;
+  /* 1rem = 25px */
+  /* 0.16rem = 4px */
+  text-decoration: none;
+  background-color: beige;
+  padding: 0.2rem 0.4rem;
+  /* 1rem = 25px */
+  /* 0.2rem = 5px */
+  /* 1rem = 25px */
+  /* 0.4rem = 10px */
+  border-radius: 0.2rem;
+  /* 1rem = 25px */
+  /* 0.2rem = 5px */
+}
+.landingPageAnchorTags:hover{
+  box-shadow: 0.04rem 0.04rem 0.4rem #ffffff99;
+  text-shadow: 0.04rem 0.04rem 0.2rem rgb(253 185 244 / 70%);
+}
+.generalSliderForRandomSection{
+  position: absolute;
+  width: 100%;
+  margin-top: 45vh;
+  display: flex;
+  justify-content: space-between;
+}
+.generalSliderForRandomSection>.carouselBtn1{
+  margin-left: 1rem;
+  font-size: 2.8rem;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color: white;
+  
+}
+.generalSliderForRandomSection>.carouselBtn2{
+  margin-right: 1rem;
+  font-size: 2.8rem;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color: white;
+}
+.callToActionBtn{
+  color: #e60aff;
+  transition: text-shadow 0.3s;
+  letter-spacing: 0.16rem;
+  /* 1rem = 25px */
+  /* 0.16rem = 4px */
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: beige;
+  padding: 0.6rem 1rem;
+  font-style: italic;
+  /* 1rem = 25px */
+  /* 0.2rem = 5px */
+  /* 1rem = 25px */
+  /* 0.4rem = 10px */
+  border-radius: 0.2rem;
+  /* 1rem = 25px */
+  /* 0.2rem = 5px */
+}
+.callToActionBtn:hover{
+  box-shadow: 0.04rem 0.04rem 0.4rem #ffffff99;
+  text-shadow: 0.04rem 0.04rem 0.2rem rgb(253 185 244 / 70%);
+  cursor: pointer;
+  /* 1rem = 25px */
+  /* 0.04rem = 1px */
+  /* 1rem = 25px */
+  /* 0.4rem = 10px */
+}
+.addALitleMarginLeft{
+  position: relative;
+  margin-left: 5rem !important;
+}
+.addALittleMarginTop{
+  position: relative;
+  margin-top: 7rem !important;
+}
+.addHalfALittleMarginTop{
+  position: relative;
+  margin-top: 3.5rem !important;
+}
+.addHalfALitleCuarterMarginTop{
+  position: relative;
+  margin-top: 1.75rem !important;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 18px; /* Reduce base font size to 18px (around 28% smaller) 1rem = 18px      */
+  }
+  h1{
+    font-size: 1.11rem;
+  }
+  h2{
+    font-size: 1.06rem;
+  }
+  .section1Landing .transversalDiv{
+    width: 100%;
+
+  }
+  .section1Landing>.divGeneral>.longitudinalDiv>.transversalDiv:nth-child(1){
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  .section1Landing>.divGeneral>.longitudinalDiv>.transversalDiv:nth-child(2){
+    position: absolute;
+    left: 2rem;
+    z-index: 0;
+  }
+  .section1Landing .centeredTransversalDivContent{
+    background: linear-gradient(rgba(76, 44, 132, 0.7), rgb(0 0 0 / 50%));
+    width: 50%;
+    margin: 5rem 0 4rem 5rem;
+    padding: 0.8rem 2rem 3rem 2rem;
+    border-radius: 0.8rem;
+    font-weight: bold;
+  }
+  .section2Landing>.divGeneral>.transversalDiv:nth-child(1)>.transversalDiv:nth-child(1){
+    margin: 5rem 0 0rem 1rem;
+    width: 70%;
+    min-height: 60vh;
+    max-height: 60vh;
+  }
+  .section2Landing>.divGeneral>.transversalDiv:nth-child(2)>.transversalDiv:nth-child(1){
+    margin: 5rem 0rem 0rem 1rem;
+    width: 70%;
+    min-height: 60vh;
+    max-height: 60vh;
+  }
+  .section3Landing>.divGeneral>.longitudinalDiv{
+    width: 90% !important;
+  }
+  .section4Landing>.divGeneral{
+    min-height: 140vh;
+    max-height: 140vh;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .section4Landing>.divGeneral .transversalDiv,.section3Landing>.divGeneral .longitudinalDiv{
+    width: 100%;
+    min-height: 65vh;
+    max-height: 65vh;
+    margin-top: 0.5rem !important;
+    padding-top: 0 !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .section4Landing>.divGeneral .transversalDiv div,.section3Landing>.divGeneral .longitudinalDiv div{
+    margin-top: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .section4Landing .containerOfButtonSliders{
+    margin-left: 2.5rem;
+  }
+  .section4Landing .generalSliderForRandomSection{
+    margin-top: 65vh !important;
+  }
+  .section4Landing>.divGeneral>.longitudinalDiv:nth-child(1) div,.section4Landing>.divGeneral>.longitudinalDiv:nth-child(2) div{
+    margin-top: 0 !important;
+    margin-left: 2rem !important;
+    width:80%;
+  }
+  .section4Landing>.divGeneral>.longitudinalDiv:nth-child(1)>div:nth-child(2){
+    margin-top: 5rem !important;
+  }
+  .section4Landing>.divGeneral>.longitudinalDiv:nth-child(2)>div:nth-child(1){
+    margin-top: 9rem !important;
+  }
+  .section4Landing>.divGeneral>.longitudinalDiv:nth-child(2)>div:nth-child(2){
+    position: relative;
+    margin-top: -3rem !important;
+  }
+  .section4Landing>.divGeneral>.transversalDiv:nth-child(2)>div:nth-child(2){
+    margin-top: 1rem !important;
+  }
+
+  .section4Landing>.divGeneral:nth-child(3)>.transversalDiv:nth-child(2)>div:nth-child(1){
+    margin-top: 3rem !important;
+  }
+  .section4Landing>.divGeneral:nth-child(3)>.transversalDiv:nth-child(2)>div:nth-child(2){
+    margin-top: -1rem !important;
+  }
+  .section4Landing .divContentTransversalForMiniSliders {
+    min-height: 18vh !important;
+    max-height: 18vh !important;
+  }
+  .section4Landing>.divGeneral:nth-child(5)>.transversalDiv:nth-child(1)>div:nth-child(1){
+    margin-top: 0rem !important;
+  }
+  .section4Landing>.divGeneral:nth-child(5)>.transversalDiv:nth-child(2)>div:nth-child(1),
+  .section4Landing>.divGeneral:nth-child(5)>.transversalDiv:nth-child(2)>div:nth-child(1)>div
+  {
+    margin-top: 2rem !important;
+    height: 20vh !important;
+  }
+  .section4Landing>.divGeneral:nth-child(5)>.transversalDiv:nth-child(2)>div:nth-child(2){
+    margin-top: 2rem !important;
+  }
+  .section5Landing .transversalDiv{
+    width: 100%;
+
+  }
+  .section5Landing>.divGeneral>.longitudinalDiv>.transversalDiv:nth-child(1){
+    position: absolute;
+    left: 0;
+    z-index: 0;
+  }
+  .section5Landing>.divGeneral>.longitudinalDiv>.transversalDiv:nth-child(2){
+    position: absolute;
+    left: 0.5rem;
+    z-index: 1;
+  }
+  .section5Landing .generalLCTASliderImg{
+    width: 100%;
+    height: 25vh;
+  }
+  .section5Landing>.divGeneral>.longitudinalDiv>.transversalDiv:nth-child(2)>div:nth-child(1){
+    margin-top: 13rem !important;
+    min-height: 30vh;
+    max-height: 30vh;
+  }
+  .section4Landing>.divGeneral:nth-child(1)>.transversalDiv:nth-child(3)>div:nth-child(1),
+  .section4Landing>.divGeneral:nth-child(1)>.transversalDiv:nth-child(3)>div:nth-child(1)>div
+  {
+    margin-top: 2rem !important;
+    height: 20vh !important;
+  }
+  .section4Landing>.divGeneral:nth-child(1)>.transversalDiv:nth-child(3)>div:nth-child(2)
+  {
+    margin-top: 2rem !important;
+  }
 }
